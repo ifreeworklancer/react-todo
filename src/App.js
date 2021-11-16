@@ -7,15 +7,15 @@ import {BrowserRouter} from "react-router-dom";
 
 function App() {
     return (
-        <div className="root">
-            <AppHeader/>
-            <main>
-                <BrowserRouter>
+        <BrowserRouter>
+            <div className="root">
+                <AppHeader/>
+                <main>
                     <AppRouter/>
-                </BrowserRouter>
-            </main>
-            <AppFooter/>
-        </div>
+                </main>
+                <AppFooter/>
+            </div>
+        </BrowserRouter>
     );
 }
 
