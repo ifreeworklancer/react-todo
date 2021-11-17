@@ -1,9 +1,9 @@
 import React from "react";
 import classes from './AppCheckbox.module.scss'
 
-const AppCheckbox = React.forwardRef(({children, ...props}, ref) => {
+function AppCheckbox({children, ...props}) {
     return (
-        <label ref={ref} className={[classes.appControlCheckbox].join(' ')}>
+        <label className={[classes.appControlCheckbox].join(' ')}>
             <input type="checkbox" {...props} className={[classes.checkbox].join(' ')}/>
             <span className={[classes.checkmark].join(' ')}/>
             {children &&
@@ -11,6 +11,6 @@ const AppCheckbox = React.forwardRef(({children, ...props}, ref) => {
             }
         </label>
     )
-});
+}
 
 export default AppCheckbox

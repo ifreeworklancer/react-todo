@@ -3,7 +3,7 @@ import classes from "./TodoList.module.scss"
 import TodoItem from "../item/TodoItem";
 import AppButton from "../../UI/button/AppButton";
 
-function TodoList({todoList, changeTodoCompleted, removeTodoItem}) {
+function TodoList({todoList, changeTodoCompleted, removeTodoItem, setModalCreateTodoVisible}) {
     if (!todoList.length) {
         return (
             <div className='not-available-text'>
@@ -17,7 +17,7 @@ function TodoList({todoList, changeTodoCompleted, removeTodoItem}) {
                 <h1 className={[classes.todoListTitle].join(' ')}>
                     You have {todoList.length} Todo
                 </h1>
-                <AppButton>Create Todo</AppButton>
+                <AppButton onClick={() => {setModalCreateTodoVisible(true)}}>Create Todo</AppButton>
             </div>
             {todoList.map((todo, index) =>
                 <TodoItem key={todo.id} number={index + 1} todo={todo} changeTodoCompleted={changeTodoCompleted}
