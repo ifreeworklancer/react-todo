@@ -2,16 +2,16 @@ import React from "react";
 import classes from './TodoItem.module.scss'
 import AppCheckbox from "../../UI/control/checkbox/AppCheckbox";
 
-function TodoItem({todo, number, changeTodoCompleted, removeTodoItem}) {
+function TodoItem({todo, changeTodoCompleted, removeTodo}) {
     const todoItemClass = [classes.todoItem];
 
     if(todo.completed) {
         todoItemClass.push(classes.isCompleted);
     }
 
-    function removeTodo(e) {
+    function clickOnRemoveTodo(e) {
         e.stopPropagation();
-        removeTodoItem(todo.id);
+        removeTodo(todo.id);
     }
 
     return (
@@ -23,11 +23,11 @@ function TodoItem({todo, number, changeTodoCompleted, removeTodoItem}) {
                     changeTodoCompleted(todo.id)
                 }}/>
                 <div className={[classes.todoItemTitle].join(' ')}>
-                    {number}. {todo.title}
+                    {todo.title}
                 </div>
             </div>
             <div>
-                <button className={[classes.todoItemBtn].join(' ')} onClick={removeTodo}>
+                <button className={[classes.todoItemBtn].join(' ')} onClick={clickOnRemoveTodo}>
                     <svg viewBox="0 0 315 315"
                          width={25}
                          height={25}

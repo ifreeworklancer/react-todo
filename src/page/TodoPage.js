@@ -23,7 +23,7 @@ function TodoPage() {
         }))
     }
 
-    function removeTodoItem(id) {
+    function removeTodo(id) {
         setTodoList(todoList.filter(todo => Number(todo.id) !== Number(id)))
     }
 
@@ -48,7 +48,7 @@ function TodoPage() {
                 <TodoList todoList={todoList}
                           setModalCreateTodoVisible={setModalCreateTodoVisible}
                           changeTodoCompleted={changeTodoCompleted}
-                          removeTodoItem={removeTodoItem}/>
+                          removeTodo={removeTodo}/>
             </div>
         </section>
     )
