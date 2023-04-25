@@ -1,0 +1,22 @@
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.formRow {
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 30px;
+  }
+}
+
+.errors {
+  margin-bottom: 20px;
+
+  p {
+    color: red;
+    font-size: .875rem;
+    margin-bottom: 5px;
+  }
+}

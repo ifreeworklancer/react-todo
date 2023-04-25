@@ -1,0 +1,48 @@
+.appControlCheckbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 35px;
+  min-height: 20px;
+}
+
+.checkbox {
+  position: absolute;
+  left: -99999999px;
+  opacity: 0;
+
+  &:checked ~ .checkmark {
+    width: 10px;
+    top: -5px;
+    left: 5px;
+    border-radius: 0;
+    opacity: 1;
+    border-color: mediumseagreen;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(45deg);
+
+    &:after {
+      display: block;
+    }
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid royalblue;
+  border-radius: 3px;
+  opacity: .7;
+  transition: all .12s, border-color .08s;
+}
+
+.label {
+  font-size: .875rem;
+  font-weight: 500;
+}

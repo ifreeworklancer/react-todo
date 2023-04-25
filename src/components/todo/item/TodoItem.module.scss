@@ -1,0 +1,55 @@
+.todoItem {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  padding: 25px 25px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(#333, .2);
+  cursor: pointer;
+}
+
+.isCompleted {
+
+  .todoItemTitle {
+    text-decoration: line-through;
+    opacity: .8;
+  }
+}
+
+.todoItemBody {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+}
+
+.todoItemTitle {
+  margin-left: 15px;
+  font-weight: 500;
+  font-size: 1.2rem;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.todoItemBtn {
+  background: transparent;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+
+    svg {
+      fill: red;
+    }
+  }
+
+  svg {
+    fill: royalblue;
+    transition: .5s;
+  }
+}

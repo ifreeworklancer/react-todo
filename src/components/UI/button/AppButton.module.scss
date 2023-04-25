@@ -1,0 +1,20 @@
+.appButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 25px;
+  border: 1px solid lighten(royalblue, 20);
+  background: transparent;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: royalblue;
+  transition: .5s;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background: royalblue;
+    border-color: royalblue;
+    color: #fff;
+  }
+}
